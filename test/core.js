@@ -1583,7 +1583,7 @@ describe('Core', () => {
                 server.route({ method: 'GET', path: '/', handler: () => 'ok' });
 
                 const res = await server.inject('/');
-                expect(res.result).to.match(/<div>\r?\n    <h1>hola!<\/h1>\r?\n<\/div>\r?\n/);
+                expect(res.result).to.match(/<div>\r?\n {4}<h1>hola!<\/h1>\r?\n<\/div>\r?\n/);
             });
         });
 
